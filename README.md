@@ -9,7 +9,7 @@ Construindo soluções digitais com tecnologia, aprendizado contínuo e atençã
 
 <br />
 
-[🌐 **Acessar meu portfólio**](https://carvalho-eduardo.github.io/portifolio-pessoal/)
+[🌐 **Acessar meu portfólio**](https://carvalho-eduardo.github.io/portfolio-pessoal/)
 
 <br />
 
