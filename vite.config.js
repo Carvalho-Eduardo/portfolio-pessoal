@@ -3,6 +3,6 @@ import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  base: "/portifolio-pessoal/",
+  base: "/portfolio-pessoal/",
   plugins: [react(), tailwindcss()],
 });
