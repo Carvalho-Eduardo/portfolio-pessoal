@@ -240,6 +240,57 @@ function Home() {
         </div>
       </section>
 
+      {/* Projetos - conexão com a página de projetos */}
+      <section
+        id="projetos"
+        className="animate-fade-up mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20"
+      >
+        <div className="relative overflow-hidden rounded-3xl border border-[#293442] bg-[#161b22] px-6 py-12 sm:px-10 sm:py-16">
+          {/* Efeito de luz no fundo */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-20 -top-32 h-80 w-80 rounded-full bg-blue-500/10 blur-3xl"
+          />
+
+          <div className="relative z-10 max-w-3xl">
+            <span className="mb-5 inline-flex items-center gap-2 text-sm font-medium uppercase tracking-[0.2em] text-blue-400">
+              <FaCode />
+              Meu trabalho
+            </span>
+
+            <h2 className="text-3xl font-bold leading-tight tracking-tight text-slate-100 sm:text-5xl">
+              Projetos que refletem minha evolução.
+            </h2>
+
+            <p className="mt-5 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">
+              Conheça as soluções que venho desenvolvendo e colocando em prática
+              ao longo da minha jornada na tecnologia.
+            </p>
+
+            <a
+              href={`${baseUrl}projetos`}
+              className="group mt-8 inline-flex items-center gap-3 rounded-xl border border-blue-400/30 bg-blue-500/10 px-6 py-4 font-semibold text-blue-300 transition duration-300 hover:border-blue-400 hover:bg-blue-500 hover:text-white hover:shadow-lg hover:shadow-blue-500/20"
+            >
+              Conheça meus projetos
+              <span
+                aria-hidden="true"
+                className="inline-block transition-transform duration-300 group-hover:translate-x-2"
+              >
+                →
+              </span>
+            </a>
+          </div>
+
+          {/* Elemento decorativo */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -bottom-16 -right-8 hidden select-none text-[18rem] font-bold leading-none text-white/2 lg:block"
+          >
+            {"</>"}
+          </div>
+        </div>
+      </section>
+
       {/* Contato */}
       <section
         id="contato"
