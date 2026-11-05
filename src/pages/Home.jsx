@@ -9,12 +9,14 @@ import {
   FaLayerGroup,
 } from "react-icons/fa";
 
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import SectionTitle from "../components/ui/SectionTitle";
 import technologies from "../data/technologies";
 
 function Home() {
+  const navigate = useNavigate();
+
   const baseUrl = import.meta.env.BASE_URL;
 
   const emailSubject = encodeURIComponent(
@@ -66,12 +68,14 @@ function Home() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link
-              to="/projetos"
-              className="rounded-lg bg-blue-500 px-6 py-3 font-semibold text-white transition hover:bg-blue-600"
+            {/* Navegação para a página de projetos */}
+            <button
+              type="button"
+              onClick={() => navigate("/projetos")}
+              className="cursor-pointer rounded-lg bg-blue-500 px-6 py-3 font-semibold text-white transition hover:bg-blue-600"
             >
               Conheça meus projetos
-            </Link>
+            </button>
 
             <button
               type="button"
@@ -269,9 +273,11 @@ function Home() {
               ao longo da minha jornada na tecnologia.
             </p>
 
-            <Link
-              to="/projetos"
-              className="group mt-8 inline-flex items-center gap-3 rounded-xl border border-blue-400/30 bg-blue-500/10 px-6 py-4 font-semibold text-blue-300 transition duration-300 hover:border-blue-400 hover:bg-blue-500 hover:text-white hover:shadow-lg hover:shadow-blue-500/20"
+            {/* Navegação para a página de projetos */}
+            <button
+              type="button"
+              onClick={() => navigate("/projetos")}
+              className="group mt-8 inline-flex cursor-pointer items-center gap-3 rounded-xl border border-blue-400/30 bg-blue-500/10 px-6 py-4 font-semibold text-blue-300 transition duration-300 hover:border-blue-400 hover:bg-blue-500 hover:text-white hover:shadow-lg hover:shadow-blue-500/20"
             >
               Conheça meus projetos
               <span
@@ -280,7 +286,7 @@ function Home() {
               >
                 →
               </span>
-            </Link>
+            </button>
           </div>
 
           {/* Elemento decorativo */}
