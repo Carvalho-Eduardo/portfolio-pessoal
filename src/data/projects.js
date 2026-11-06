@@ -1,3 +1,4 @@
+
 const projects = [
   {
     id: 1,
@@ -32,6 +33,33 @@ const projects = [
     technologies: ["React", "JavaScript", "Vercel"],
     demo: "https://cardapio-1.vercel.app/",
     github: "https://github.com/Carvalho-Eduardo/cardapio",
+  },
+  {
+    id: 3,
+    title: "Sistema de Gerenciamento de Produtos",
+    subtitle: "Aplicação web CRUD com Java",
+    category: "Desenvolvimento backend",
+    cover: "crud",
+    description:
+      "Aplicação web desenvolvida com Java, JSP, JDBC e MySQL para gerenciamento de produtos. Permite realizar operações completas de cadastro, consulta, listagem, atualização e exclusão, com persistência de dados em banco de dados.",
+    features: [
+      "Cadastro e consulta de produtos",
+      "Listagem dos produtos cadastrados",
+      "Atualização das informações",
+      "Exclusão de registros",
+      "Persistência de dados com MySQL",
+      "Organização da aplicação em camadas",
+    ],
+    technologies: [
+      "Java",
+      "JSP",
+      "JDBC",
+      "MySQL",
+      "HTML5",
+      "CSS3",
+      "Apache Tomcat",
+    ],
+    github: "https://github.com/Carvalho-Eduardo/CrudProduto",
   },
 ];
 
