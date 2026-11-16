@@ -1,22 +1,27 @@
 import { FaGithub, FaExternalLinkAlt, FaCheck } from "react-icons/fa";
 
 function ProjectCard({ project }) {
+  const isStockFlow = project.cover === "stockflow";
   const isVoting = project.cover === "votacao";
   const isCrud = project.cover === "crud";
 
-  const coverStyle = isVoting
-    ? "bg-[radial-gradient(circle_at_85%_15%,rgba(83,155,245,0.35),transparent_38%),linear-gradient(135deg,#142c49,#152133_70%,#101720)]"
-    : isCrud
-      ? "bg-[radial-gradient(circle_at_85%_15%,rgba(63,185,80,0.28),transparent_38%),linear-gradient(135deg,#173b2b,#172a25_70%,#101720)]"
-      : "bg-[radial-gradient(circle_at_85%_15%,rgba(255,177,92,0.25),transparent_40%),linear-gradient(135deg,#42271e,#2b2020_70%,#101720)]";
+  const coverStyle = isStockFlow
+    ? "bg-[radial-gradient(circle_at_85%_15%,rgba(88,166,255,0.35),transparent_38%),linear-gradient(135deg,#142d4c,#17283d_70%,#101720)]"
+    : isVoting
+      ? "bg-[radial-gradient(circle_at_85%_15%,rgba(190,130,255,0.32),transparent_38%),linear-gradient(135deg,#38234f,#29213b_70%,#101720)]"
+      : isCrud
+        ? "bg-[radial-gradient(circle_at_85%_15%,rgba(63,185,80,0.28),transparent_38%),linear-gradient(135deg,#173b2b,#172a25_70%,#101720)]"
+        : "bg-[radial-gradient(circle_at_85%_15%,rgba(255,177,92,0.25),transparent_40%),linear-gradient(135deg,#42271e,#2b2020_70%,#101720)]";
 
-  const coverColor = isVoting
-    ? "text-[#b7d8ff]"
-    : isCrud
-      ? "text-[#a5e6b0]"
-      : "text-[#ffd2a6]";
+  const coverColor = isStockFlow
+    ? "text-[#8cc8ff]"
+    : isVoting
+      ? "text-[#d6b4ff]"
+      : isCrud
+        ? "text-[#a5e6b0]"
+        : "text-[#ffd2a6]";
 
-  const coverIcon = isVoting ? "▤" : isCrud ? "⌘" : "☷";
+  const coverIcon = isStockFlow ? "▦" : isVoting ? "▤" : isCrud ? "⌘" : "☷";
 
   return (
     <article className="group flex h-full min-w-0 flex-col overflow-hidden rounded-2xl border border-[#293442] bg-[#161b22] transition duration-300 hover:-translate-y-1 hover:border-blue-400/50 hover:shadow-[0_18px_45px_rgba(0,0,0,0.22)]">
@@ -93,7 +98,6 @@ function ProjectCard({ project }) {
                 className="mt-1 shrink-0 text-[#3fb950]"
                 aria-hidden="true"
               />
-
               <span>{feature}</span>
             </li>
           ))}

@@ -1,7 +1,34 @@
-
 const projects = [
   {
     id: 1,
+    title: "StockFlow",
+    subtitle: "Sistema de gerenciamento de estoque",
+    category: "Sistema web",
+    cover: "stockflow",
+    description:
+      "Sistema web de gerenciamento de estoque desenvolvido para centralizar o controle de produtos, categorias, fornecedores, compras e movimentações. Possui autenticação de usuários, integração entre frontend e backend e persistência de dados em banco de dados.",
+    features: [
+      "Autenticação e cadastro de usuários",
+      "Gerenciamento de produtos e categorias",
+      "Cadastro e gerenciamento de fornecedores",
+      "Controle de compras e movimentações de estoque",
+      "Integração com banco de dados",
+      "Interface responsiva com dashboard administrativo",
+    ],
+    technologies: [
+      "React",
+      "JavaScript",
+      "Java 21",
+      "Spring Boot",
+      "MySQL",
+      "JWT",
+      "Tailwind CSS",
+    ],
+    demo: "https://stock-management-system-two-livid.vercel.app/",
+    github: "https://github.com/Carvalho-Eduardo/stock-management-system",
+  },
+  {
+    id: 2,
     title: "Sistema de votação do Grêmio",
     subtitle: "Plataforma de votação escolar",
     category: "Sistema web",
@@ -18,7 +45,7 @@ const projects = [
     github: "https://github.com/Carvalho-Eduardo/votacao-gremio-app",
   },
   {
-    id: 2,
+    id: 3,
     title: "Cardápio online",
     subtitle: "Experiência digital para restaurantes",
     category: "Desenvolvimento web",
@@ -35,7 +62,7 @@ const projects = [
     github: "https://github.com/Carvalho-Eduardo/cardapio",
   },
   {
-    id: 3,
+    id: 4,
     title: "Sistema de Gerenciamento de Produtos",
     subtitle: "Aplicação web CRUD com Java",
     category: "Desenvolvimento backend",
