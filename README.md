@@ -9,7 +9,11 @@ Construindo soluções digitais com tecnologia, aprendizado contínuo e atençã
 
 <br />
 
-[🌐 **Acessar meu portfólio**](https://carvalho-eduardo.github.io/portfolio-pessoal/)
+<p align="center">
+  <a href="https://carvalho-eduardo.github.io/portfolio-pessoal/">
+    <img src="https://img.shields.io/badge/🌐_ACESSE_MEU_PORTF%C3%93LIO-1769AA?style=for-the-badge&logoColor=white" alt="Acesse meu portfólio"/>
+  </a>
+</p>
 
 <br />
 
