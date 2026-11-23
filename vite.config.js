@@ -5,4 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   base: "/portfolio-pessoal/",
   plugins: [react(), tailwindcss()],
+  optimizeDeps: {
+    include: ["react", "react-dom", "react-router-dom", "react-icons/fa"],
+  },
 });

@@ -1,4 +1,10 @@
-import { FaGithub, FaExternalLinkAlt, FaCheck } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import {
+  FaGithub,
+  FaExternalLinkAlt,
+  FaCheck,
+  FaArrowRight,
+} from "react-icons/fa";
 
 function ProjectCard({ project }) {
   const isStockFlow = project.cover === "stockflow";
@@ -27,23 +33,23 @@ function ProjectCard({ project }) {
     <article className="group flex h-full min-w-0 flex-col overflow-hidden rounded-2xl border border-[#293442] bg-[#161b22] transition duration-300 hover:-translate-y-1 hover:border-blue-400/50 hover:shadow-[0_18px_45px_rgba(0,0,0,0.22)]">
       {/* Capa do projeto */}
       <div
-        className={`relative flex min-h-52.5 items-center overflow-hidden p-6 sm:min-h-57.5 sm:p-7 ${coverStyle}`}
+        className={`relative flex min-h-44 sm:min-h-56 items-center overflow-hidden p-5 sm:p-7 ${coverStyle}`}
       >
         <div className="relative z-10 max-w-full">
           <span
-            className="mb-4 grid h-12 w-12 place-items-center rounded-[13px] border border-white/20 bg-white/9 text-2xl text-white"
+            className="mb-3 sm:mb-4 grid h-10 w-10 sm:h-12 sm:w-12 place-items-center rounded-[11px] sm:rounded-[13px] border border-white/20 bg-white/9 text-xl sm:text-2xl text-white"
             aria-hidden="true"
           >
             {coverIcon}
           </span>
 
           <p
-            className={`mb-2 text-[10px] font-bold uppercase tracking-[1.2px] ${coverColor}`}
+            className={`mb-1.5 sm:mb-2 text-[10px] font-bold uppercase tracking-[1.2px] ${coverColor}`}
           >
             {project.category}
           </p>
 
-          <h3 className="text-xl font-bold leading-snug tracking-tight text-white sm:text-2xl">
+          <h3 className="text-lg font-bold leading-snug tracking-tight text-white sm:text-2xl">
             {project.title}
           </h3>
 
@@ -51,7 +57,7 @@ function ProjectCard({ project }) {
         </div>
 
         <span
-          className="absolute -bottom-2 right-6 text-6xl font-extrabold leading-none text-white/8 sm:text-[72px]"
+          className="absolute -bottom-2 right-4 sm:right-6 text-5xl sm:text-[72px] font-extrabold leading-none text-white/8 select-none"
           aria-hidden="true"
         >
           {String(project.id).padStart(2, "0")}
@@ -69,26 +75,26 @@ function ProjectCard({ project }) {
       </div>
 
       {/* Conteúdo */}
-      <div className="flex flex-1 flex-col p-5 sm:p-6">
+      <div className="flex flex-1 flex-col p-4 sm:p-6">
         <div className="mb-4 flex flex-wrap gap-2 text-[11px] text-[#a5b1c2] sm:gap-x-4">
           <span>Projeto prático</span>
           <span aria-hidden="true">•</span>
           <span>Aplicação web</span>
         </div>
 
-        <h4 className="mb-3 text-lg font-bold leading-relaxed text-[#f0f6fc]">
+        <h4 className="mb-2 sm:mb-3 text-base sm:text-lg font-bold leading-relaxed text-[#f0f6fc]">
           O que é
         </h4>
 
-        <p className="mb-5 text-sm leading-7 text-[#a5b1c2]">
+        <p className="mb-4 sm:mb-5 text-xs sm:text-sm leading-6 sm:leading-7 text-[#a5b1c2]">
           {project.description}
         </p>
 
-        <h4 className="mb-3 text-sm font-semibold text-slate-200">
+        <h4 className="mb-2 sm:mb-3 text-xs sm:text-sm font-semibold text-slate-200">
           Principais funcionalidades
         </h4>
 
-        <ul className="mb-5 grid gap-2.5">
+        <ul className="mb-5 grid gap-2 sm:gap-2.5">
           {project.features?.map((feature) => (
             <li
               key={feature}
@@ -105,15 +111,15 @@ function ProjectCard({ project }) {
 
         {/* Tecnologias */}
         <div className="mb-5 mt-auto">
-          <h4 className="mb-3 text-sm font-semibold text-slate-200">
+          <h4 className="mb-2.5 sm:mb-3 text-xs sm:text-sm font-semibold text-slate-200">
             Tecnologias
           </h4>
 
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-1.5 sm:gap-2">
             {project.technologies.map((technology) => (
               <span
                 key={technology}
-                className="rounded-md border border-[#2b3b4d] bg-[#111a25] px-2.5 py-1.5 text-[10px] font-medium text-[#a8cfff] sm:text-xs"
+                className="rounded-md border border-[#2b3b4d] bg-[#111a25] px-2 sm:px-2.5 py-1 sm:py-1.5 text-[10px] font-medium text-[#a8cfff] sm:text-xs"
               >
                 {technology}
               </span>
@@ -122,30 +128,40 @@ function ProjectCard({ project }) {
         </div>
 
         {/* Links */}
-        <div className="flex flex-col gap-2 border-t border-[#293442] pt-5 sm:flex-row">
-          {project.demo && (
+        <div className="flex flex-col gap-2.5 border-t border-[#293442] pt-4 sm:pt-5">
+          <Link
+            to={`/projetos/${project.id}`}
+            className="botao botao-principal w-full justify-center"
+          >
+            Ver detalhes
+            <FaArrowRight aria-hidden="true" />
+          </Link>
+
+          <div className="flex flex-col gap-2 sm:flex-row">
+            {project.demo && (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Abrir demonstração de ${project.title} em nova aba`}
+                className="botao botao-secundario min-w-0 flex-1 justify-center"
+              >
+                <FaExternalLinkAlt aria-hidden="true" />
+                Demonstração
+              </a>
+            )}
+
             <a
-              href={project.demo}
+              href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`Abrir demonstração de ${project.title} em nova aba`}
-              className="botao botao-principal min-w-0 flex-1"
+              aria-label={`Ver código-fonte de ${project.title} no GitHub em nova aba`}
+              className="botao botao-secundario min-w-0 flex-1 justify-center"
             >
-              <FaExternalLinkAlt aria-hidden="true" />
-              Ver demonstração
+              <FaGithub aria-hidden="true" />
+              Código-fonte
             </a>
-          )}
-
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`Ver código-fonte de ${project.title} no GitHub em nova aba`}
-            className="botao botao-secundario min-w-0 flex-1"
-          >
-            <FaGithub aria-hidden="true" />
-            Código-fonte
-          </a>
+          </div>
         </div>
       </div>
     </article>
