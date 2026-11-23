@@ -131,7 +131,7 @@ function Reveal({
 function GlowLine({ className = "" }) {
   return (
     <div
-      className={`h-px bg-gradient-to-r from-transparent via-blue-500/40 to-transparent ${className}`}
+      className={`h-px bg-linear-to-r from-transparent via-blue-500/40 to-transparent ${className}`}
     />
   );
 }
@@ -226,7 +226,7 @@ function Home() {
         {/* Orbs de luz */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-24 top-1/4 h-[480px] w-[480px] rounded-full blur-[130px]"
+          className="pointer-events-none absolute -right-24 top-1/4 h-120 w-120 rounded-full blur-[130px]"
           style={{
             background: "rgba(37,99,235,0.12)",
             transform: `translateY(${scrollY * -0.07}px)`,
@@ -234,7 +234,7 @@ function Home() {
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -left-16 bottom-1/4 h-[280px] w-[280px] rounded-full blur-[90px]"
+          className="pointer-events-none absolute -left-16 bottom-1/4 h-70 w-70 rounded-full blur-[90px]"
           style={{
             background: "rgba(14,165,233,0.08)",
             transform: `translateY(${scrollY * 0.05}px)`,
@@ -255,7 +255,7 @@ function Home() {
             >
               Eduardo
               <br />
-              <span className="bg-gradient-to-r from-blue-400 via-blue-300 to-cyan-300 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-blue-400 via-blue-300 to-cyan-300 bg-clip-text text-transparent">
                 Carvalho
               </span>
               <span className="text-blue-400">.</span>
@@ -284,7 +284,7 @@ function Home() {
                   </span>
                 </span>
                 {/* Shimmer no hover */}
-                <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-500 group-hover:translate-x-full" />
+                <span className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/10 to-transparent transition-transform duration-500 group-hover:translate-x-full" />
               </button>
 
               <button
@@ -334,9 +334,9 @@ function Home() {
           {/* Foto — limpa, sem cards */}
           <div className="relative shrink-0 animate-fade-up mt-4 lg:mt-0">
             {/* Halo de luz */}
-            <div className="absolute -inset-8 rounded-[2.5rem] bg-gradient-to-br from-blue-600/12 via-transparent to-cyan-500/8 blur-2xl" />
+            <div className="absolute -inset-8 rounded-[2.5rem] bg-linear-to-br from-blue-600/12 via-transparent to-cyan-500/8 blur-2xl" />
             {/* Borda gradiente */}
-            <div className="absolute -inset-px rounded-[2rem] bg-gradient-to-br from-blue-500/28 via-transparent to-cyan-400/14" />
+            <div className="absolute -inset-px rounded-4xl bg-linear-to-br from-blue-500/28 via-transparent to-cyan-400/14" />
             {/* Imagem */}
             <div className="relative overflow-hidden rounded-[1.875rem] border border-white/8 shadow-2xl shadow-black/70">
               <img
@@ -350,7 +350,7 @@ function Home() {
                   console.error("Erro ao carregar foto:", e.currentTarget.src)
                 }
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-950/14 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-blue-950/14 via-transparent to-transparent" />
             </div>
           </div>
         </div>
@@ -366,7 +366,7 @@ function Home() {
         {/* Orb de fundo */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -left-40 top-1/4 h-[450px] w-[450px] rounded-full bg-blue-600/5 blur-[120px]"
+          className="pointer-events-none absolute -left-40 top-1/4 h-112.5 w-112.5 rounded-full bg-blue-600/5 blur-[120px]"
         />
 
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 py-16 sm:py-24 lg:py-28">
@@ -377,7 +377,7 @@ function Home() {
           </Reveal>
 
           <Reveal delay={80}>
-            <GlowLine className="mb-10 sm:mb-16 max-w-[200px] opacity-50" />
+            <GlowLine className="mb-10 sm:mb-16 max-w-50 opacity-50" />
           </Reveal>
 
           <div className="grid gap-8 sm:gap-12 md:grid-cols-[1fr_300px] md:items-start">
@@ -418,7 +418,7 @@ function Home() {
 
             {/* Card currículo */}
             <Reveal delay={160} from="right">
-              <div className="relative overflow-hidden rounded-3xl border border-white/8 bg-gradient-to-br from-[#0f1621] to-[#0a0f18] p-6 sm:p-8 shadow-2xl">
+              <div className="relative overflow-hidden rounded-3xl border border-white/8 bg-linear-to-br from-[#0f1621] to-[#0a0f18] p-6 sm:p-8 shadow-2xl">
                 <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-blue-500/8 blur-2xl" />
                 <FaDownload className="mb-4 sm:mb-5 text-2xl sm:text-3xl text-blue-400" />
                 <h3 className="text-lg sm:text-xl font-bold text-slate-100">
@@ -454,7 +454,7 @@ function Home() {
       <section id="tecnologias" className="relative">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute right-0 top-1/3 h-[400px] w-[400px] rounded-full bg-blue-600/5 blur-[110px]"
+          className="pointer-events-none absolute right-0 top-1/3 h-100 w-100 rounded-full bg-blue-600/5 blur-[110px]"
         />
 
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 py-16 sm:py-24 lg:py-28">
@@ -465,7 +465,7 @@ function Home() {
           </Reveal>
 
           <Reveal delay={80}>
-            <GlowLine className="mb-10 sm:mb-16 max-w-[200px] opacity-50" />
+            <GlowLine className="mb-10 sm:mb-16 max-w-50 opacity-50" />
           </Reveal>
 
           <Reveal delay={120}>
@@ -484,7 +484,7 @@ function Home() {
           </Reveal>
 
           {/* Rows de tecnologia */}
-          <div className="divide-y divide-white/5 rounded-2xl border border-white/5 bg-white/[0.015] backdrop-blur-sm overflow-hidden">
+          <div className="divide-y divide-white/5 rounded-2xl border border-white/5 bg-white/1.5 backdrop-blur-sm overflow-hidden">
             {technologyRows.map((row, rowIndex) => (
               <Reveal key={rowIndex} delay={rowIndex * 40}>
                 <div
@@ -517,7 +517,7 @@ function Home() {
                                 className="group flex w-14 sm:w-16 lg:w-20 flex-col items-center gap-2"
                                 title={tech.category}
                               >
-                                <div className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl border border-white/8 bg-white/[0.04] transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-400/30 group-hover:bg-blue-400/8 group-hover:shadow-lg group-hover:shadow-blue-500/10">
+                                <div className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-xl border border-white/8 bg-white/4 transition-all duration-300 group-hover:-translate-y-1 group-hover:border-blue-400/30 group-hover:bg-blue-400/8 group-hover:shadow-lg group-hover:shadow-blue-500/10">
                                   {Icon ? (
                                     <Icon
                                       aria-hidden="true"
@@ -563,7 +563,7 @@ function Home() {
         </div>
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-600/5 blur-[150px]"
+          className="pointer-events-none absolute left-1/2 top-1/2 h-125 w-125 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-600/5 blur-[150px]"
         />
 
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 py-16 sm:py-24 lg:py-28">
@@ -573,7 +573,7 @@ function Home() {
             <h2 className="mt-4 text-3xl sm:text-5xl lg:text-6xl font-black leading-tight sm:leading-[1.08] tracking-tight text-white">
               Projetos que refletem
               <br />
-              <span className="bg-gradient-to-r from-blue-400 via-blue-300 to-cyan-300 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-blue-400 via-blue-300 to-cyan-300 bg-clip-text text-transparent">
                 minha evolução.
               </span>
             </h2>
@@ -612,7 +612,7 @@ function Home() {
               ].map((name) => (
                 <span
                   key={name}
-                  className="inline-flex items-center gap-2 sm:gap-2.5 rounded-full border border-white/8 bg-white/[0.03] px-3.5 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm text-slate-500"
+                  className="inline-flex items-center gap-2 sm:gap-2.5 rounded-full border border-white/8 bg-white/3 px-3.5 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm text-slate-500"
                 >
                   <span className="h-1.5 w-1.5 rounded-full bg-blue-400/50" />
                   {name}
@@ -631,7 +631,7 @@ function Home() {
       <section id="contato" className="relative">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-1/3 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-600/5 blur-[130px]"
+          className="pointer-events-none absolute left-1/2 top-1/3 h-125 w-125 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-600/5 blur-[130px]"
         />
 
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 py-16 sm:py-24 lg:py-28">
@@ -642,7 +642,7 @@ function Home() {
           </Reveal>
 
           <Reveal delay={80}>
-            <GlowLine className="mb-10 sm:mb-16 max-w-[200px] opacity-50" />
+            <GlowLine className="mb-10 sm:mb-16 max-w-50 opacity-50" />
           </Reveal>
 
           <div className="grid gap-8 sm:gap-12 md:grid-cols-2 md:items-start">
@@ -651,7 +651,7 @@ function Home() {
               <Reveal delay={120}>
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight text-white">
                   Estou aberto a novas{" "}
-                  <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+                  <span className="bg-linear-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
                     oportunidades
                   </span>
                 </h3>
@@ -695,7 +695,7 @@ function Home() {
 
             {/* Card e-mail */}
             <Reveal delay={160} from="right">
-              <div className="relative overflow-hidden rounded-3xl border border-white/8 bg-gradient-to-br from-[#0f1621] to-[#090e18] p-6 sm:p-8 shadow-2xl">
+              <div className="relative overflow-hidden rounded-3xl border border-white/8 bg-linear-to-br from-[#0f1621] to-[#090e18] p-6 sm:p-8 shadow-2xl">
                 <div className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-blue-500/8 blur-2xl" />
                 <p className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-slate-600">
                   E-mail profissional

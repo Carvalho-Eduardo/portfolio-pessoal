@@ -55,7 +55,7 @@ function Footer() {
       <button
         type="button"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className={`fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-[200] flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-[#0f1621]/90 text-slate-400 shadow-2xl backdrop-blur-xl transition-all duration-500 hover:border-blue-400/40 hover:text-blue-400 ${
+        className={`fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-200 flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-[#0f1621]/90 text-slate-400 shadow-2xl backdrop-blur-xl transition-all duration-500 hover:border-blue-400/40 hover:text-blue-400 ${
           showTop
             ? "translate-y-0 opacity-100"
             : "translate-y-4 opacity-0 pointer-events-none"
@@ -67,7 +67,7 @@ function Footer() {
 
       <footer className="relative border-t border-white/5 bg-[#080c12]">
         {/* Linha brilhante no topo */}
-        <div className="absolute top-0 left-1/2 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
+        <div className="absolute top-0 left-1/2 h-px w-2/3 -translate-x-1/2 bg-linear-to-r from-transparent via-blue-500/30 to-transparent" />
 
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-14">
           <div className="flex flex-col justify-between gap-8 sm:flex-row sm:items-start sm:gap-10">
@@ -79,7 +79,7 @@ function Footer() {
                 className="text-xl font-black tracking-tight text-white transition-opacity hover:opacity-70"
               >
                 Eduardo
-                <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
                   {" "}Carvalho
                 </span>
                 <span className="text-blue-400">.</span>

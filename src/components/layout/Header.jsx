@@ -99,7 +99,7 @@ function Header() {
 
   return (
     <header
-      className={`fixed top-0 z-[100] w-full transition-all duration-500 ${
+      className={`fixed top-0 z-100 w-full transition-all duration-500 ${
         scrolled
           ? "border-b border-white/8 bg-[#080c12]/95 shadow-2xl shadow-black/40 backdrop-blur-2xl"
           : "border-b border-transparent bg-transparent"
@@ -109,7 +109,7 @@ function Header() {
       {showProgress && (
         <div className="absolute bottom-0 left-0 h-[1.5px] w-full bg-white/5">
           <div
-            className="h-full bg-gradient-to-r from-blue-600 via-blue-400 to-cyan-400 transition-all duration-100"
+            className="h-full bg-linear-to-r from-blue-600 via-blue-400 to-cyan-400 transition-all duration-100"
             style={{ width: `${scrollProgress}%` }}
           />
         </div>
@@ -122,13 +122,13 @@ function Header() {
           className="group relative text-base sm:text-lg font-black tracking-tight text-white transition-opacity duration-300 hover:opacity-80"
         >
           <span>Eduardo</span>
-          <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
             {" "}Carvalho
           </span>
           <span className="text-blue-400">.</span>
 
           {/* Linha decorativa embaixo do logo */}
-          <span className="absolute -bottom-1 left-0 h-px w-0 bg-gradient-to-r from-blue-400 to-cyan-300 transition-all duration-300 group-hover:w-full" />
+          <span className="absolute -bottom-1 left-0 h-px w-0 bg-linear-to-r from-blue-400 to-cyan-300 transition-all duration-300 group-hover:w-full" />
         </Link>
 
         {/* Nav desktop */}
@@ -185,7 +185,7 @@ function Header() {
         >
           <span
             className={`h-0.5 w-5 bg-white transition-all duration-300 ${
-              mobileOpen ? "translate-y-[8px] rotate-45" : ""
+              mobileOpen ? "translate-y-2 rotate-45" : ""
             }`}
           />
           <span
@@ -195,7 +195,7 @@ function Header() {
           />
           <span
             className={`h-0.5 w-5 bg-white transition-all duration-300 ${
-              mobileOpen ? "-translate-y-[8px] -rotate-45" : ""
+              mobileOpen ? "-translate-y-2 -rotate-45" : ""
             }`}
           />
         </button>
